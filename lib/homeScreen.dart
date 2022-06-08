@@ -5,45 +5,61 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Card1Wid(),
-          SizedBox(height: 50,),
-          Stack(
-            alignment: Alignment.topCenter,
-            clipBehavior: Clip.none, children:[ 
-                    Positioned(
+      body: Container(
+        margin: EdgeInsets.only(left: 10,right: 10),
+        child: Column(
+          
+          children: [
+            Card1Wid(),
+            SizedBox(height: 50,),
+            Stack(
+              alignment: Alignment.topCenter,
+              clipBehavior: Clip.none, children:[ 
                       
-                      bottom: 80,
-                      child: Container(
-                        height: 30,
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        color: Colors.grey,
+                         Container(
+                      width: 50,
+                      height: 50,
+                      decoration: ShapeDecoration(
+                        shape: CircleBorder(),
+                        color: Colors.transparent),
+                      ),
+                Positioned(
+                top: 30,
+
+                  child: Card(
+                    elevation: 5,
+                  color: Color(0XFFd38484),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 20,bottom: 10,left: 10,right: 10),
+                    child: Column(
+                      children: [
+                       SizedBox(height: 30,),
+                         Container(
+                         height: 30,
+                         width: MediaQuery.of(context).size.width*0.9,
+                        color: Color(0XFFa8d8ad),
                         child: Text(""),
-                      ),
+                        ),
+                      ],
                     ),
-              Positioned(
-              
-                child: Card(
-                color: Colors.red[200],
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20,bottom: 20,left: 10,right: 10),
-                  child: Column(
-                    children: [
-                     SizedBox(height: 10,),
-                       Container(
-                       height: 30,
-                       width: MediaQuery.of(context).size.width,
-                      color: Colors.green,
-                      child: Text(""),
-                      ),
-                    ],
                   ),
+                            ),
                 ),
-                          ),
-              ),]
-          )
-        ],
+                Positioned(
+                        
+                        bottom: 5,
+                        child: Container(
+                          height: 30,
+                          width: 250,
+                         // width: MediaQuery.of(context).size.width * 0.4,
+                          color: Color(0XFFc4c4c4),
+                          child: Text(""),
+                        ),
+                      ),
+                ]
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -57,28 +73,27 @@ class Card1Wid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      
-      color: Colors.red[200],
+      elevation: 5,
+      color: Color(0XFFd38484),
       // height: MediaQuery.of(context).size.height * 0.12,
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: Container(
-          // height: MediaQuery.of(context).size.height * 0.05,
-          width: MediaQuery.of(context).size.width,
+         width: MediaQuery.of(context).size.width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                
-                width: MediaQuery.of(context).size.width *0.5,
-                color: Colors.grey,
+                padding: EdgeInsets.only(top: 8,bottom: 8),
+                width: 250,
+                color: Color(0XFFc4c4c4),
                 child: Text(""),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 15,),
               Container(
-              
-               width: MediaQuery.of(context).size.width * 0.9,
-                color: Colors.green,
+              padding: EdgeInsets.only(top: 8,bottom: 8),
+               width: MediaQuery.of(context).size.width * 0.85,
+                color: Color(0XFFa8d8ad),
                 child: Text(""),
               ),
             ],
