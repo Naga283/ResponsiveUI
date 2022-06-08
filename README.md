@@ -3,7 +3,8 @@
 A new Flutter project.
 
 ## Getting Started
-<video src="">
+After widering the screen
+<img src="https://user-images.githubusercontent.com/75671317/172696923-3ab268b7-7bcb-460e-bf4c-36e3bee77367.png">
 
 This project is a starting point for a Flutter application.
 
